@@ -24,7 +24,7 @@ export default function ShowEarth(props) {
             <button className="start_exploring" onClick={handleRoute}>start exploring</button>
         </Html>
         <Lights/>
-        <Suspense>
+        <Suspense fallback={<div>Loading... </div>}>
             <Model/>
         </Suspense>
         <OrbitControls/>
