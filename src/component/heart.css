@@ -1,9 +1,0 @@
-.heart_icon {
-    width:25px;
-    height:25px;
-    display: inline;
-}
-
-.heart_icon:hover {
-    transform: scale(1.2);
-}
