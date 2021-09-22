@@ -4,6 +4,7 @@ import Gallery from './pages/gallery/gallery';
 import Header from './component/header';
 import ShowEarth from './pages/home/showEarth';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { Suspense } from 'react';
 
 function App() {
   return (
@@ -14,8 +15,11 @@ function App() {
         <Route path="/gallery">
             <Gallery/> 
           </Route>
-          <Route path="/">
+
+          <Route exact path="/">
+            <Suspense fallback={<div>Loading...</div>}>
             <ShowEarth/>
+            </Suspense>
           </Route>
         </Switch>
       </BrowserRouter>
