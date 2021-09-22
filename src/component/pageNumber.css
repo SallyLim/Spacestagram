@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+.pg_num {
+    list-style-type: none;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    padding: 15px;
+    cursor: pointer;
+}
+
+.pg_num:hover {
+    background-color: #3c3c3c;
+}
+
+.pg_num_list {
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: black;
+    color: white;
+    margin:0;
+}
+
+.active_pg_num {
+    background-color: #001E6C;
+}
