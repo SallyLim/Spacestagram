@@ -4,7 +4,7 @@ ENTER HERE AT YOUR OWN RISK: [space.sallylim.ca](http://space.sallylim.ca/)
 
 Features:
 
-🌍 When you land on Spacestagram, you will be greeted with an interactive 3D earth!
+🌍 When you land on Spacestagram, you will be greeted with an interactive 3D earth! (try spinning it🤫)
 
 📷 Then, enter the photo gallery consisting of photos from the NASA APOS API.
 
