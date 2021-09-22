@@ -1,5 +1,7 @@
 # Explore space in the cool way!
 
+ENTER HERE AT YOUR OWN RISK: [GO](http://space.sallylim.ca/)
+
 Features:
 
 🌍 When you land on Spacestagram, you will be greeted with an interactive 3D earth!
