@@ -1,6 +1,6 @@
 # Explore space in the cool way!
 
-ENTER HERE AT YOUR OWN RISK: [GO](http://space.sallylim.ca/)
+ENTER HERE AT YOUR OWN RISK: [space.sallylim.ca](http://space.sallylim.ca/)
 
 Features:
 
