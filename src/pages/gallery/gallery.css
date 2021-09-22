@@ -1,7 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@800&display=swap');
 
 .title {
+    background-color: white;
     font-size: 80px;
     font-family: 'Poppins', sans-serif;
     text-align: center;
+    margin:0;
+    padding:30px;
 }

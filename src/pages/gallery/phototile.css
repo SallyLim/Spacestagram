@@ -1,5 +1,4 @@
 .page {
-    padding-top: 60px;
     padding-bottom: 60px;
     background-color: #F5F5F5;
 }
@@ -15,6 +14,7 @@
 }
 
 .flex {
+    padding-top: 60px;
     display:flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -59,4 +59,33 @@
     align-items: center;
     margin:5px 0 5px 0;
 
+}
+
+.filter_button {
+    height: 50px;
+    width: 200px;
+    font-size: 20px;
+    font-family: 'Poppins', sans-serif;
+    border-radius: 15px;
+    border:none;
+    background-color: white;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+}
+
+.filter_button_wrapper {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+}
+
+.filter_button_active {
+    background-color: #001E6C;
+    color:white;
+}
+
+.filter_button:hover {
+    border:#001E6C 2px solid;
 }

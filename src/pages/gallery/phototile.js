@@ -1,7 +1,7 @@
 import './phototile.css';
 import React, { useState, useEffect } from "react";
-import Heart from './heart';
-import Loading from './loading';
+import Heart from '../../component/heart';
+import Loading from '../../component/loading';
 import Description from './description';
 import PageNumbers from './pageNumbers';
 
@@ -10,8 +10,13 @@ export default function PhotoTile(props) {
     const [loading, setLoading] = useState(true)
     const regex = /(jpg)$/
     const [pageNum, setPageNum] = useState(1)
+    const [likedFilterButton, setLikedFilterButton] = useState(false)
 
     useEffect(() => {
+        if (likedFilterButton) {
+            setPhoto(JSON.parse(localStorage.getItem('heart')))
+            return
+        }
         setLoading(true)
         const today = new Date();
         const start_date = new Date();
@@ -29,11 +34,18 @@ export default function PhotoTile(props) {
                 setLoading(false)
                 setPhoto(json)
             });
-    }, [pageNum])
+    }, [pageNum, likedFilterButton])
 
     return (
         <div class="page">
-            {loading ? <Loading /> :
+                <div className="filter_button_wrapper">
+                    <button 
+                    className={`filter_button ${likedFilterButton ? `filter_button_active` : ``}`}
+                    onClick={click => setLikedFilterButton(!likedFilterButton)}>
+                    Filter by Liked
+                    </button>
+                </div>
+                {loading ? <Loading /> :
                 <div className="flex">
                     {photo
                         .filter(photo => regex.test(photo.url))
@@ -47,7 +59,7 @@ export default function PhotoTile(props) {
                                 <div className="text">
                                     <div className="tile_header">
                                         <h2 className="tile_title">{single_photo.title}</h2>
-                                        <Heart uniqueID={single_photo.url} />
+                                        <Heart photo={single_photo} />
                                     </div>
                                     <Description text={single_photo.explanation} />
                                     <p className="date">{single_photo.date}</p>
